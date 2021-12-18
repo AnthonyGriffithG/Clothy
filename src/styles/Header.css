@@ -1,0 +1,32 @@
+.main-header {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 0.1em solid rgb(201, 201, 201);
+}
+
+.header-link {
+  text-decoration: none;
+  padding: 1.5rem 0;
+  color: black;
+  border-bottom: 0.1em solid rgba(0, 0, 0, 0);
+  transition: border-color 0.2s;
+}
+
+.header-link:hover {
+  border-color: rgb(0, 0, 0);
+}
+
+.nav-links {
+  display: flex;
+  width: min(75rem, 90%);
+  gap: 2rem;
+  font-weight: 600;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
