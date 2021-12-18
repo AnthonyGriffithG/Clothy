@@ -8,12 +8,11 @@
   text-decoration: none;
   padding: 1.5rem 0;
   color: black;
-  border-bottom: 0.1em solid rgba(0, 0, 0, 0);
-  transition: border-color 0.2s;
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0);
 }
 
 .header-link:hover {
-  border-color: rgb(0, 0, 0);
+  border-bottom: 0.1rem solid rgb(0, 0, 0);
 }
 
 .nav-links {
