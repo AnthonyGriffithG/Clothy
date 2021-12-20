@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaSignOutAlt } from 'react-icons/fa';
+
+import GoogleAuth from './GoogleAuth';
 import '../styles/Header.css';
+
 const Header = () => {
   return (
     <nav className="main-header">
@@ -17,7 +21,7 @@ const Header = () => {
           </Link>
         </div>
 
-        <div className="account">ACCOUNT</div>
+        <GoogleAuth />
       </div>
     </nav>
   );

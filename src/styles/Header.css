@@ -6,20 +6,23 @@
 
 .header-link {
   text-decoration: none;
-  padding: 1.5rem 0;
-  color: black;
-  border-bottom: 0.1rem solid rgba(0, 0, 0, 0);
+  padding: 1.2rem 0;
+  border-bottom: 0.15rem solid rgba(0, 0, 0, 0);
+  margin-bottom: -0.15rem;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  color: inherit;
 }
 
 .header-link:hover {
-  border-bottom: 0.1rem solid rgb(0, 0, 0);
+  border-bottom: 0.15rem solid rgb(0, 0, 0);
+  cursor: pointer;
 }
 
 .nav-links {
   display: flex;
   width: min(75rem, 90%);
   gap: 2rem;
-  font-weight: 600;
   align-items: center;
   justify-content: space-around;
 }
@@ -28,4 +31,10 @@
   display: flex;
   justify-content: center;
   gap: 2rem;
+}
+
+.btn-google {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
 }
