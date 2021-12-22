@@ -10,7 +10,9 @@ const App = () => {
       <Router history={history}>
         <div>
           <Header />
-          <Route path="/" component={ClothList} />
+          <Route path="/" exact render={() => <ClothList />} />
+          <Route path="/apartado" exact render={() => <ClothList />} />
+          <Route path="/disponible" exact render={() => <ClothList />} />
         </div>
       </Router>
     </div>

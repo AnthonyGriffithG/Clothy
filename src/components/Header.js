@@ -13,10 +13,10 @@ const Header = () => {
           CLOTHY
         </Link>
         <div className="centered">
-          <Link to={'/'} className="header-link">
+          <Link to={'/apartado'} className="header-link">
             APARTADO
           </Link>
-          <Link to={'/'} className="header-link">
+          <Link to={'/disponible'} className="header-link">
             DISPONIBLE
           </Link>
         </div>
