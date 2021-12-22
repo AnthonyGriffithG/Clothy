@@ -10,7 +10,11 @@ const App = () => {
       <Router history={history}>
         <div>
           <Header />
-          <Route path="/" exact render={() => <ClothList />} />
+          <Route
+            path="/"
+            exact
+            render={() => <ClothList clothes={[{ id: 1 }]} />}
+          />
           <Route path="/apartado" exact render={() => <ClothList />} />
           <Route path="/disponible" exact render={() => <ClothList />} />
         </div>
