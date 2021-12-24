@@ -1,4 +1,10 @@
-import { ADD_ITEM, GET_ITEMS, GET_ITEM, EDIT_ITEM, DELETE_ITEM } from './types';
+import {
+  ADD_ITEM,
+  GET_ITEMS,
+  GET_ITEM,
+  EDIT_ITEM,
+  DELETE_ITEM,
+} from '../actions/types.js';
 
 const INITAL_STATE = {
   items: [],
@@ -6,12 +12,12 @@ const INITAL_STATE = {
 };
 
 const itemsReducer = (state = INITAL_STATE, { type, payload }) => {
-  switch (action) {
+  switch (type) {
     case ADD_ITEM:
       return {
         ...state,
-        items: [...items, payload],
-        displayedItems: [...displayedItems, payload],
+        items: [...state.items, payload],
+        displayedItems: [...state.displayedItems, payload],
       };
     case GET_ITEMS:
       return {
