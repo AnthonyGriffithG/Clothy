@@ -15,11 +15,15 @@
 @media screen and (max-width: 950px) {
   .items-container {
     grid-template-columns: repeat(2, 1fr);
+    padding: 0 3em;
   }
 }
 
 @media screen and (max-width: 530px) {
   .items-container {
     grid-template-columns: 1fr;
+  }
+  :root {
+    font-size: 14px;
   }
 }

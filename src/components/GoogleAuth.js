@@ -43,16 +43,18 @@ class GoogleAuth extends Component {
   renderButton() {
     if (this.props.isSignedIn) {
       return (
-        <div className="btn-google header-link" onClick={this.onSignOutClick}>
-          <FaSignOutAlt size="1.5em" />
-          <p>SIGN OUT</p>
+        <div onClick={this.onSignOutClick}>
+          <a href="#" className="link">
+            SIGN OUT
+          </a>
         </div>
       );
     }
     return (
-      <div className="btn-google header-link" onClick={this.onSignInClick}>
-        <FaSignInAlt size="1.5em" />
-        <p>SIGN IN</p>
+      <div onClick={this.onSignInClick}>
+        <a href="#" className="link">
+          SIGN IN
+        </a>
       </div>
     );
   }
