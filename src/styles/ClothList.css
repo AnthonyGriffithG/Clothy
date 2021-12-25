@@ -1,3 +1,8 @@
 .items-container {
   display: flex;
+  flex-wrap: wrap;
+  padding: 3em;
+  gap: 2em;
+  margin: 0 auto;
+  width: fit-content;
 }

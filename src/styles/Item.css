@@ -1,0 +1,12 @@
+.item {
+  display: flex;
+  flex-direction: column;
+}
+
+.item img {
+  max-width: 400px;
+}
+
+.image-info {
+  text-align: center;
+}

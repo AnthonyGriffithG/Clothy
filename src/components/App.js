@@ -15,8 +15,8 @@ const App = () => {
             exact
             render={() => <ClothList clothes={[{ id: 1 }]} />}
           />
-          <Route path="/apartado" exact render={() => <ClothList />} />
           <Route path="/disponible" exact render={() => <ClothList />} />
+          <Route path="/apartado" exact render={() => <div>ok</div>} />
         </div>
       </Router>
     </div>

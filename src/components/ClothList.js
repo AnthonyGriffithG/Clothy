@@ -5,13 +5,18 @@ import { connect } from 'react-redux';
 import { getItems } from '../actions';
 
 const ClothList = ({ clothes, getItems }) => {
-  console.log('entro');
   useEffect(() => {
     getItems();
   }, []);
 
-  const renderedItems = clothes?.map(({ id, name, description }) => (
-    <Item id={id} name={name} description={description} key={id} />
+  const renderedItems = clothes?.map(({ id, name, description, price }) => (
+    <Item
+      id={id}
+      name={name}
+      description={description}
+      price={price}
+      key={id}
+    />
   ));
 
   return <div className="items-container">{renderedItems}</div>;

@@ -38,3 +38,7 @@
   align-items: center;
   gap: 0.3em;
 }
+
+.border {
+  border-bottom: 0.15rem solid rgb(0, 0, 0);
+}
