@@ -25,7 +25,7 @@ const ClothList = ({ clothes, getItems }) => {
     <div>
       <div className="items-options">
         <div></div>
-        <Link to={'/items/new'}>
+        <Link className="add-item-link" to={'/items/new'}>
           <MdAddCircle size="2em" />
         </Link>
       </div>

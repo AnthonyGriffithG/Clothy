@@ -18,6 +18,9 @@ a {
   color: black;
 }
 
+.add-item-link {
+  display: flex;
+}
 @media screen and (max-width: 1400px) {
   .items-container {
     grid-template-columns: repeat(3, 1fr);
