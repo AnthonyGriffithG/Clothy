@@ -2,8 +2,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 0 2em;
   padding: 1.5em;
+  border-bottom: 1px solid rgb(216, 216, 216);
 }
 
 .nav-links {
@@ -49,6 +49,4 @@
   .nav-links.active {
     display: flex;
   }
-
-  
 }

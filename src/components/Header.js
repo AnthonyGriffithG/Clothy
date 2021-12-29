@@ -4,12 +4,10 @@ import { MdMenu } from 'react-icons/md';
 
 import GoogleAuth from './GoogleAuth';
 import '../styles/Header.css';
-import { click } from '@testing-library/user-event/dist/click';
 
 const Header = () => {
   const navLinks = useRef(null);
   const [clicked, setClicked] = useState(false);
-  console.log('hola');
   return (
     <nav className="main-header">
       <Link className="link nav-title" to="/">

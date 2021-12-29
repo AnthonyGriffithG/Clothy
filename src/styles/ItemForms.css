@@ -1,0 +1,37 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  background-color: rgb(238, 238, 238);
+  border: 1px solid black;
+  width: fit-content;
+  border-radius: 10px;
+  margin-top: 2em;
+}
+td {
+  padding: 0.5em 1em;
+}
+
+input {
+  border: none;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  font-family: 'Poppins';
+}
+
+button[type='submit'] {
+  border-radius: 5px;
+  padding: 0.3em 1em;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+button[type='submit']:hover {
+  background-color: white;
+}
+
+input[type='number'] {
+  width: 60%;
+}

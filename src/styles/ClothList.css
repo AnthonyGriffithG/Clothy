@@ -4,6 +4,18 @@
   padding: 3em;
   gap: 2em;
   margin: 0 auto;
+  width: 80%;
+}
+
+.items-options {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(236, 236, 236);
+  border-bottom: 1px solid rgb(216, 216, 216);
+  padding: 0.5em 1em;
+}
+a {
+  color: black;
 }
 
 @media screen and (max-width: 1400px) {
@@ -15,7 +27,7 @@
 @media screen and (max-width: 950px) {
   .items-container {
     grid-template-columns: repeat(2, 1fr);
-    padding: 0 3em;
+    padding: 1em 3em;
   }
 }
 

@@ -1,4 +1,6 @@
 import itemsApi from '../apis/clothy-api';
+import history from '../history';
+
 import {
   SIGN_IN,
   SIGN_OUT,
@@ -9,7 +11,6 @@ import {
   DELETE_ITEM,
 } from './types';
 export const signIn = (id) => {
-  console.log(id);
   return {
     type: SIGN_IN,
     payload: id,
@@ -28,6 +29,7 @@ export const addItem = (formValues) => async (dispatch) => {
     type: ADD_ITEM,
     payload: data,
   });
+  history.push('/');
 };
 
 export const getItems = () => async (dispatch) => {
