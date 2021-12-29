@@ -6,11 +6,7 @@ import { connect } from 'react-redux';
 import { getItems } from '../actions';
 import { Link } from 'react-router-dom';
 
-const ClothList = ({ clothes, getItems }) => {
-  useEffect(() => {
-    getItems();
-  }, []);
-
+const ClothList = ({ clothes }) => {
   const renderedItems = clothes?.map(({ id, name, description, price }) => (
     <Item
       id={id}
@@ -34,10 +30,4 @@ const ClothList = ({ clothes, getItems }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    clothes: state.items.displayedItems,
-  };
-};
-
-export default connect(mapStateToProps, { getItems })(ClothList);
+export default ClothList;

@@ -7,8 +7,9 @@ import {
 } from '../actions/types.js';
 
 const INITAL_STATE = {
-  items: [],
-  displayedItems: [],
+  all: [],
+  available: [],
+  bought: [],
 };
 
 const itemsReducer = (state = INITAL_STATE, { type, payload }) => {
@@ -16,14 +17,14 @@ const itemsReducer = (state = INITAL_STATE, { type, payload }) => {
     case ADD_ITEM:
       return {
         ...state,
-        items: [...state.items, payload],
-        displayedItems: [...state.displayedItems, payload],
+        all: [...state.all, payload],
+        available: [...state.available, payload],
       };
     case GET_ITEMS:
       return {
         ...state,
-        items: payload,
-        displayedItems: payload,
+        all: payload,
+        available: payload,
       };
     case EDIT_ITEM:
       const newListHandler = (list) =>
@@ -31,8 +32,8 @@ const itemsReducer = (state = INITAL_STATE, { type, payload }) => {
 
       return {
         ...state,
-        items: newListHandler(state.items),
-        displayedItems: newListHandler(state.displayedItems),
+        all: newListHandler(state.all),
+        available: newListHandler(state.available),
       };
 
     default:
