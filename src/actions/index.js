@@ -10,10 +10,10 @@ import {
   EDIT_ITEM,
   DELETE_ITEM,
 } from './types';
-export const signIn = (id) => {
+export const signIn = (id, imgUrl) => {
   return {
     type: SIGN_IN,
-    payload: id,
+    payload: { id, imgUrl },
   };
 };
 
@@ -57,9 +57,9 @@ export const editItem = (id, formValues) => async (disptach) => {
 };
 
 export const deleteItem = (id) => async (dispatch) => {
-  const { data } = await itemsApi.delete(`/items/${id}`);
+  await itemsApi.delete(`/items/${id}`);
   dispatch({
     type: DELETE_ITEM,
-    payload: data,
+    payload: id,
   });
 };

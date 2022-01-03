@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { FaSignInAlt, FaSignOutAlt } from 'react-icons/fa';
 
 import { GOOGLE_AUTH2_KEY } from '../config';
 import { signIn, signOut } from '../actions';
@@ -26,7 +25,10 @@ class GoogleAuth extends Component {
   onAuthChange = (isSignedIn) => {
     //Function to update the redux state so the component can be re rendered
     if (isSignedIn) {
-      this.props.signIn(this.auth.currentUser.get().getId());
+      this.props.signIn(
+        this.auth.currentUser.get().getId(),
+        this.auth.currentUser.get().getBasicProfile().getImageUrl()
+      );
     } else {
       this.props.signOut();
     }
@@ -44,17 +46,13 @@ class GoogleAuth extends Component {
     if (this.props.isSignedIn) {
       return (
         <div onClick={this.onSignOutClick}>
-          <a href="#" className="link">
-            SIGN OUT
-          </a>
+          <span className="link">SIGN OUT</span>
         </div>
       );
     }
     return (
       <div onClick={this.onSignInClick}>
-        <a href="#" className="link">
-          SIGN IN
-        </a>
+        <span className="link">SIGN IN</span>
       </div>
     );
   }

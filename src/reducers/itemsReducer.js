@@ -1,7 +1,6 @@
 import {
   ADD_ITEM,
   GET_ITEMS,
-  GET_ITEM,
   EDIT_ITEM,
   DELETE_ITEM,
 } from '../actions/types.js';
@@ -29,13 +28,19 @@ const itemsReducer = (state = INITAL_STATE, { type, payload }) => {
     case EDIT_ITEM:
       const newListHandler = (list) =>
         list.map((el) => (el.id === payload.id ? payload : el));
-
       return {
         ...state,
         all: newListHandler(state.all),
         available: newListHandler(state.available),
       };
-
+    case DELETE_ITEM:
+      const newListHandlerDelete = (list) =>
+        list.filter((el) => el.id !== payload);
+      return {
+        ...state,
+        all: newListHandlerDelete(state.all),
+        available: newListHandlerDelete(state.available),
+      };
     default:
       return state;
   }

@@ -10,7 +10,7 @@ import { getItems } from '../actions';
 const App = ({ items, available, bought, getItems }) => {
   useEffect(() => {
     getItems();
-  }, []);
+  }, [getItems]);
 
   return (
     <div>
@@ -19,12 +19,12 @@ const App = ({ items, available, bought, getItems }) => {
           <Header />
           <Route path="/" exact render={() => <ClothList clothes={items} />} />
           <Route
-            path="/disponible"
+            path="/available"
             exact
             render={() => <ClothList clothes={available} />}
           />
           <Route
-            path="/apartado"
+            path="/bought"
             exact
             render={() => <ClothList clothes={bought} />}
           />

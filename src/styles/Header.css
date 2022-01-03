@@ -15,6 +15,7 @@
   display: block;
   text-decoration: none;
   color: black;
+  cursor: pointer;
 }
 
 .nav-title {
@@ -28,6 +29,17 @@
   right: 3.4em;
   top: 1.5em;
 }
+
+.profile-pic {
+  border-radius: 50%;
+  height: 3em;
+}
+
+.profile-pic-container {
+  display: flex;
+  align-items: center;
+}
+
 @media (max-width: 600px) {
   .main-header {
     flex-direction: column;
@@ -48,5 +60,9 @@
 
   .nav-links.active {
     display: flex;
+  }
+
+  .profile-pic {
+    display: none;
   }
 }

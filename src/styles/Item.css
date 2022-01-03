@@ -1,6 +1,7 @@
 .item {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .item img {
@@ -9,4 +10,26 @@
 
 .image-info {
   text-align: center;
+}
+
+.image-header {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3em;
+  gap: 0.5em;
+}
+
+.icon-wrapper-rounded {
+  display: flex;
+  padding: 0.3em;
+  background-color: rgb(245, 245, 245);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.icon-wrapper-rounded:hover {
+  background-color: white;
 }

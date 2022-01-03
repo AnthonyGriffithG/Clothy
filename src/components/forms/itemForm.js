@@ -1,6 +1,5 @@
 import '../../styles/ItemForms.css';
 import { useForm } from 'react-hook-form';
-import { useState, useEffect } from 'react';
 
 const ItemForm = ({ onSubmit }) => {
   const { register, handleSubmit } = useForm();

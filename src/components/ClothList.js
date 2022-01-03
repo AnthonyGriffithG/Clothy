@@ -1,21 +1,21 @@
-import React, { useEffect } from 'react';
 import Item from './Item';
 import { MdAddCircle } from 'react-icons/md';
 import '../styles/ClothList.css';
-import { connect } from 'react-redux';
-import { getItems } from '../actions';
 import { Link } from 'react-router-dom';
 
 const ClothList = ({ clothes }) => {
-  const renderedItems = clothes?.map(({ id, name, description, price }) => (
-    <Item
-      id={id}
-      name={name}
-      description={description}
-      price={price}
-      key={id}
-    />
-  ));
+  const renderedItems = clothes?.map(
+    ({ id, name, description, price, img_url }) => (
+      <Item
+        id={id}
+        name={name}
+        description={description}
+        price={price}
+        img_url={img_url}
+        key={id}
+      />
+    )
+  );
 
   return (
     <div>

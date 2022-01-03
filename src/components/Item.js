@@ -1,15 +1,27 @@
 import React from 'react';
 import '../styles/Item.css';
+import { AiFillEdit, AiFillDelete } from 'react-icons/ai';
+import { connect } from 'react-redux';
+import { deleteItem } from '../actions';
 
-const Item = ({ name, description, price }) => {
+const Item = ({ name, description, price, id, img_url, deleteItem }) => {
+  console.log(img_url);
+  const onDelete = async () => {
+    deleteItem(id);
+  };
   return (
     <div className="item">
       <div className="image">
-        <img
-          src="https://i.ibb.co/txykJPg/1ed5876d-234e-4e3d-be54-16827af4a0c6.jpg"
-          alt={description}
-        />
+        <img src={img_url} alt={description} />
       </div>
+      <header className="image-header">
+        <span className="icon-wrapper-rounded">
+          <AiFillEdit size="1.2em" />
+        </span>
+        <span className="icon-wrapper-rounded" onClick={onDelete}>
+          <AiFillDelete size="1.2em" />
+        </span>
+      </header>
       <footer className="image-info">
         <h3>{name}</h3>
         <p>{description}</p>
@@ -19,4 +31,4 @@ const Item = ({ name, description, price }) => {
   );
 };
 
-export default Item;
+export default connect(null, { deleteItem })(Item);
