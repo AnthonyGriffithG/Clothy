@@ -3,6 +3,7 @@ import {
   GET_ITEMS,
   EDIT_ITEM,
   DELETE_ITEM,
+  GET_ITEM,
 } from '../actions/types.js';
 
 const INITAL_STATE = {
@@ -24,6 +25,18 @@ const itemsReducer = (state = INITAL_STATE, { type, payload }) => {
         ...state,
         all: payload,
         available: payload,
+      };
+    case GET_ITEM:
+      const addItemHandler = (list, item) => {
+        if (list.some((el) => el.id === item.id)) {
+          return list.map((mapEl) => (mapEl.id === item.id ? item : mapEl));
+        }
+        return [...list, item];
+      };
+      return {
+        ...state,
+        all: addItemHandler(state.all, payload),
+        available: addItemHandler(state.available, payload),
       };
     case EDIT_ITEM:
       const newListHandler = (list) =>

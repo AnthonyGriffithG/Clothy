@@ -21,6 +21,13 @@ a {
 .add-item-link {
   display: flex;
 }
+
+.fixed {
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
+}
+
 @media screen and (max-width: 1400px) {
   .items-container {
     grid-template-columns: repeat(3, 1fr);

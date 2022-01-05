@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
-import { Router, Route } from 'react-router-dom';
+import { Router, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Header from './Header';
 import ClothList from './ClothList';
 import history from '../history';
 import ItemCreate from './forms/ItemCreate';
 import { getItems } from '../actions';
+import ItemEdit from './forms/ItemEdit';
 
 const App = ({ items, available, bought, getItems }) => {
   useEffect(() => {
@@ -17,18 +18,25 @@ const App = ({ items, available, bought, getItems }) => {
       <Router history={history}>
         <div>
           <Header />
-          <Route path="/" exact render={() => <ClothList clothes={items} />} />
-          <Route
-            path="/available"
-            exact
-            render={() => <ClothList clothes={available} />}
-          />
-          <Route
-            path="/bought"
-            exact
-            render={() => <ClothList clothes={bought} />}
-          />
-          <Route path="/items/new" exact component={ItemCreate} />
+          <Switch>
+            <Route
+              path="/"
+              exact
+              render={() => <ClothList clothes={items} />}
+            />
+            <Route
+              path="/available"
+              exact
+              render={() => <ClothList clothes={available} />}
+            />
+            <Route
+              path="/bought"
+              exact
+              render={() => <ClothList clothes={bought} />}
+            />
+            <Route path="/items/new" exact component={ItemCreate} />
+            <Route path="/items/:id" exact component={ItemEdit} />
+          </Switch>
         </div>
       </Router>
     </div>

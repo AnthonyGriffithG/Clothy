@@ -1,13 +1,16 @@
 import { connect } from 'react-redux';
 import '../../styles/ItemForms.css';
-import { addItem } from '../../actions/index';
+import { editItem, getItem } from '../../actions/index';
 import ItemForm from './ItemForm';
 import { IMGBB_KEY } from '../../config';
 import axios from 'axios';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-const ItemCreate = ({ addItem }) => {
+const ItemEdit = ({ editItem, item, getItem, match }) => {
   const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    getItem(match.params.id);
+  }, [getItem, match.params.id]);
 
   const onSubmit = async (formValues) => {
     setLoading(true);
@@ -19,9 +22,10 @@ const ItemCreate = ({ addItem }) => {
       reqBody
     );
     formValues.img_url = data.data.url;
-    await addItem(formValues);
+    await editItem(formValues);
     setLoading(false);
   };
+
   return (
     <>
       {loading ? (
@@ -29,10 +33,23 @@ const ItemCreate = ({ addItem }) => {
           <div className="ui text loader">Uploading</div>
         </div>
       ) : (
-        <ItemForm onSubmit={onSubmit} formTitle="New Item Form" />
+        <ItemForm
+          onSubmit={onSubmit}
+          initialValues={{
+            name: item?.name,
+            description: item?.description,
+            price: item?.price,
+          }}
+          formTitle="Edit Item Form"
+        />
       )}
     </>
   );
 };
 
-export default connect(null, { addItem })(ItemCreate);
+const mapStateToProps = (state, props) => {
+  return {
+    item: state.items.all.find((item) => item.id === +props.match.params.id),
+  };
+};
+export default connect(mapStateToProps, { editItem, getItem })(ItemEdit);

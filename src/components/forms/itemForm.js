@@ -1,8 +1,15 @@
 import '../../styles/ItemForms.css';
 import { useForm } from 'react-hook-form';
+import { useEffect } from 'react';
 
-const ItemForm = ({ onSubmit }) => {
-  const { register, handleSubmit } = useForm();
+const ItemForm = ({ onSubmit, initialValues, formTitle }) => {
+  const { register, handleSubmit, reset } = useForm({
+    defaultValues: initialValues,
+  });
+
+  useEffect(() => {
+    reset(initialValues);
+  }, [initialValues, reset]);
 
   return (
     <div className="form-container">
@@ -11,7 +18,7 @@ const ItemForm = ({ onSubmit }) => {
           <thead>
             <tr>
               <td align="center" colSpan={2}>
-                <h3>New Item Form</h3>
+                <h3>{formTitle}</h3>
               </td>
             </tr>
           </thead>
@@ -48,7 +55,10 @@ const ItemForm = ({ onSubmit }) => {
                 <label>Image</label>
               </td>
               <td>
-                <input {...register('image', { required: true })} type="file" />
+                <input
+                  {...register('image', { required: false })}
+                  type="file"
+                />
               </td>
             </tr>
             <tr>
