@@ -24,6 +24,7 @@ export const signOut = () => {
 };
 
 export const addItem = (formValues) => async (dispatch) => {
+  console.log(formValues);
   const { data } = await itemsApi.post('/items', formValues);
   dispatch({
     type: ADD_ITEM,
@@ -49,7 +50,7 @@ export const getItem = (id) => async (dispatch) => {
 };
 
 export const editItem = (id, formValues) => async (disptach) => {
-  const { data } = await itemsApi.post(`/items/${id}`, formValues);
+  const { data } = await itemsApi.put(`/items/${id}`, formValues);
   disptach({
     type: EDIT_ITEM,
     payload: data,

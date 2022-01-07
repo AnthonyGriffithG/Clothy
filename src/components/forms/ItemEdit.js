@@ -14,15 +14,21 @@ const ItemEdit = ({ editItem, item, getItem, match }) => {
 
   const onSubmit = async (formValues) => {
     setLoading(true);
-    const reqBody = new FormData();
-    reqBody.set('key', IMGBB_KEY);
-    reqBody.append('image', formValues.image[0]);
-    const { data } = await axios.post(
-      'https://api.imgbb.com/1/upload',
-      reqBody
-    );
-    formValues.img_url = data.data.url;
-    await editItem(formValues);
+    if (formValues.image.length) {
+      console.log('entro');
+      const reqBody = new FormData();
+      reqBody.set('key', IMGBB_KEY);
+      reqBody.append('image', formValues.image[0]);
+      const { data } = await axios.post(
+        'https://api.imgbb.com/1/upload',
+        reqBody
+      );
+      formValues.img_url = data.data.url;
+    } else {
+      formValues.img_url = item.img_url;
+    }
+    console.log(formValues);
+    await editItem(item.id, formValues);
     setLoading(false);
   };
 

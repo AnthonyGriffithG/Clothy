@@ -11,6 +11,7 @@ const ItemCreate = ({ addItem }) => {
 
   const onSubmit = async (formValues) => {
     setLoading(true);
+
     const reqBody = new FormData();
     reqBody.set('key', IMGBB_KEY);
     reqBody.append('image', formValues.image[0]);
@@ -20,7 +21,6 @@ const ItemCreate = ({ addItem }) => {
     );
     formValues.img_url = data.data.url;
     await addItem(formValues);
-    setLoading(false);
   };
   return (
     <>

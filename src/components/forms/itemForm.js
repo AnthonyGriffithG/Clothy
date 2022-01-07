@@ -58,6 +58,7 @@ const ItemForm = ({ onSubmit, initialValues, formTitle }) => {
                 <input
                   {...register('image', { required: false })}
                   type="file"
+                  accept="image/*"
                 />
               </td>
             </tr>
