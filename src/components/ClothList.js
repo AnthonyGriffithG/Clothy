@@ -1,26 +1,9 @@
 import Item from './Item';
-import { MdAddCircle } from 'react-icons/md';
+
 import '../styles/ClothList.css';
-import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import ClothListOptions from './ClothListOptions';
 
 const ClothList = ({ clothes }) => {
-  const [fixed, setFixed] = useState(false);
-  const changeAddBtn = () => {
-    if (window.innerWidth < 600 && window.scrollY >= 70) {
-      setFixed(true);
-    } else {
-      setFixed(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', changeAddBtn);
-    return () => {
-      window.removeEventListener('scroll', changeAddBtn);
-    };
-  }, []);
-
   const renderedItems = clothes?.map(
     ({ id, name, description, price, img_url }) => (
       <Item
@@ -36,15 +19,7 @@ const ClothList = ({ clothes }) => {
 
   return (
     <div>
-      <div className="items-options">
-        <div></div>
-        <Link
-          className={`add-item-link ${fixed ? 'fixed' : ''}`}
-          to={'/items/new'}
-        >
-          <MdAddCircle size={fixed ? '3em' : '2em'} />
-        </Link>
-      </div>
+      <ClothListOptions />
       <div className="items-container">{renderedItems}</div>
     </div>
   );
