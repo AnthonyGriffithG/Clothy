@@ -1,7 +1,5 @@
 import Item from './Item';
-
 import '../styles/ClothList.css';
-import ClothListOptions from './ClothListOptions';
 
 const ClothList = ({ clothes }) => {
   const renderedItems = clothes?.map(
@@ -19,7 +17,6 @@ const ClothList = ({ clothes }) => {
 
   return (
     <div>
-      <ClothListOptions />
       <div className="items-container">{renderedItems}</div>
     </div>
   );
