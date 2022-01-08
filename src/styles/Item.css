@@ -41,3 +41,7 @@ a {
   width: fit-content;
   height: fit-content;
 }
+
+.image {
+  height: 100%;
+}
