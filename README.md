@@ -8,19 +8,42 @@ Cool fullstack (**PERN**) react project to use multiple topics learnt, such as *
 ## Website overview
 Basically the idea of the application is to administrate multiple items that are being selled in a website, at the moment every user that is signed in can create, delete and edit all items of the website, meanwhile an unsigned user can only see the content. 
 <p align='center'>
-<img src="https://user-images.githubusercontent.com/58449215/148701103-6796c341-a310-4270-bfcc-ade49bc65ee9.png" width="500">  
+<img src="https://user-images.githubusercontent.com/58449215/148701103-6796c341-a310-4270-bfcc-ade49bc65ee9.png" width="900">  
 </p>
 
-### Filtering
-User can search movies in the next ways: <strong>Popular, Trending, Top rated</strong> and <strong> Search by name </strong>
-  
- <img src="https://user-images.githubusercontent.com/58449215/144736874-cdfe987d-55f4-4da0-a347-d52d6728bd45.png" width="900">
- 
-### Overview of movie
-The user can see some information about the movie by hovering the image.  
-  
-<img src="https://user-images.githubusercontent.com/58449215/144736988-0ad9a0b6-8303-4f9b-bc0c-7fd12e7989fd.png" width="500">
+### User authentification
+The first important aspect of the application is that it allows user to sign in in order to modify the website. So the difference would look like this:
 
+ <p align="center">
+ <img src="https://user-images.githubusercontent.com/58449215/148701742-79e18a41-00ef-46c4-9ba1-814df7eaaed2.png" width="900">
+ </p>
+ 
+### Adding and editing items
+Signed users can add and edit items with the following forms:  
+<p align="center"> 
+ <img src="https://user-images.githubusercontent.com/58449215/148701972-5041598c-d139-4add-9e91-578299e304e1.png" width="800">
+</p>
+
+### Item options
+The signed user can perform different actions with the items that are on the website with the following buttons:
+<p align='center'>
+<img src="https://user-images.githubusercontent.com/58449215/148702344-7e5abfbd-c0bf-4300-9c34-5769e9ae789d.png" width="500">
+</p>
+
+### Navigation
+The user can navigate from all items, to available and bought by clicking these header options:
+<p align='center'>
+<img src="https://user-images.githubusercontent.com/58449215/148702516-276ca2df-75c3-4993-a718-bc9f6350c7ea.png" width="500">
+</p>
+
+### Pagination
+The user is able to navigate throw all the cloths easily with the pagination buttons, which allows the user to increase or decrease the page by 1 or digit the specific page he wants into the middle number input.
+<p align='center'>
+<img src="https://user-images.githubusercontent.com/58449215/148702600-30260c3d-0bb3-4aa9-a037-4aa148420395.png" width="500">
+</p>
+
+### Full responsive
+The user is able to use the website in all kind of devices, including tablets, smartphones and PCs.
 
 ## Technologies used
 <a href="#" target="_blank"> <img src="https://img.icons8.com/color/48/000000/html-5.png"/> </a>
