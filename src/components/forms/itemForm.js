@@ -72,7 +72,7 @@ const ItemForm = ({ onSubmit, initialValues, formTitle }) => {
             </tr>
             <tr>
               <td colSpan={2} align="center">
-                <button type="submit">Create</button>
+                <button type="submit">Submit</button>
               </td>
             </tr>
           </tbody>
