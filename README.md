@@ -3,7 +3,7 @@ Project created by:
 [![Github](https://img.shields.io/badge/GitHub-Anthony_Griffith-100000?style=for-the-badge&logo=github&logoColor=white&labelColor=101010)](https://github.com/AnthonyGriffith) [![LinkedIn](https://img.shields.io/badge/LinkedIn-Anthony_Griffith-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=101010)](https://www.linkedin.com/in/anthony-griffith/)
 
 # Clothy
-Cool fullstack (**PERN**) react project to use multiple topics learnt, such as **google client authentification**, Navigation with **React Router**, form creation with **React Hooks Form**, state managment with **React-Redux**, API calls to a **backend server** that uses a **postgres database** to store and fetch data, and all this with a nice looking and completely **responsive** design! 
+Cool fullstack (**PERN**) react project to use multiple topics learnt, such as **google client authentification**, Navigation with **React Router**, form creation with **React Hooks Form**, state managment with **React-Redux**, API calls to a **Nodejs backend server** that uses a **postgres database** to store and fetch data, and all this with a nice looking and completely **responsive** design! 
 
 ## Website overview
 Basically the idea of the application is to administrate multiple items that are being selled in a website, at the moment every user that is signed in can create, delete and edit all items of the website, meanwhile an unsigned user can only see the content. 
@@ -44,23 +44,26 @@ The user is able to navigate throw all the cloths easily with the pagination but
 
 ### Full responsive
 The user is able to use the website in all kind of devices, including tablets, smartphones and PCs.
+<p align='center'>
+  <img src="https://user-images.githubusercontent.com/58449215/148703565-6ac4ed8e-d282-4b2d-835a-19a9c7fc7c11.gif" width="500">
+</p>
 
 ## Technologies used
 <a href="#" target="_blank"> <img src="https://img.icons8.com/color/48/000000/html-5.png"/> </a>
 <a href="#" target="_blank"> <img src="https://img.icons8.com/color/48/000000/css3.png"/> </a>
 <a href="#" target="_blank"> <img src="https://img.icons8.com/color/48/000000/javascript.png"/></a> 
+<a href="#" target="_blank"> <img src="https://img.icons8.com/color/48/000000/redux.png"/> </a>
 <a href="#" target="_blank"> <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png"/></a> 
+<a href="#" target="_blank"> <img src="https://img.icons8.com/color/48/000000/postgreesql.png"/> </a>
+<a href="#" target="_blank"> <img src="https://img.icons8.com/color/48/000000/nodejs.png"/> </a>
 
 ## External APIs
-In order to get all the movies I used the services provided from The Movie Database API, that you can find here: https://developers.themoviedb.org
+In order to host images I used the free Imgbb API, which can be found here: https://api.imgbb.com
 
 
 
 ## How to run?
-You can test the website here: https://cinema-top-movies.netlify.app or follow these steps:
-1. Clone the project
-2. Open the folder directory
-3. Install dependencies with the following command:   
+ 
 ```
 npm install
 ```
