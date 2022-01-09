@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+Project created by:  
+  
+[![Github](https://img.shields.io/badge/GitHub-Anthony_Griffith-100000?style=for-the-badge&logo=github&logoColor=white&labelColor=101010)](https://github.com/AnthonyGriffith) [![LinkedIn](https://img.shields.io/badge/LinkedIn-Anthony_Griffith-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=101010)](https://www.linkedin.com/in/anthony-griffith/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Clothy
+Cool fullstack (**PERN**) react project to use multiple topics learnt, such as **google client authentification**, Navigation with **React Router**, form creation with **React Hooks Form**, state managment with **React-Redux**, API calls to a **Nodejs backend server** that uses a **postgres database** to store and fetch data, and all this with a nice looking and completely **responsive** design! 
 
-## Available Scripts
+## Website overview
+Basically the idea of the application is to administrate multiple items that are being selled in a website, at the moment every user that is signed in can create, delete and edit all items of the website, meanwhile an unsigned user can only see the content. 
+<p align='center'>
+<img src="https://user-images.githubusercontent.com/58449215/148701103-6796c341-a310-4270-bfcc-ade49bc65ee9.png" width="900">  
+</p>
 
-In the project directory, you can run:
+### User authentification
+The first important aspect of the application is that it allows user to sign in in order to modify the website. So the difference would look like this:
 
-### `npm start`
+ <p align="center">
+ <img src="https://user-images.githubusercontent.com/58449215/148701742-79e18a41-00ef-46c4-9ba1-814df7eaaed2.png" width="900">
+ </p>
+ 
+### Adding and editing items
+Signed users can add and edit items with the following forms:  
+<p align="center"> 
+ <img src="https://user-images.githubusercontent.com/58449215/148701972-5041598c-d139-4add-9e91-578299e304e1.png" width="800">
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Item options
+The signed user can perform different actions with the items that are on the website with the following buttons:
+<p align='center'>
+<img src="https://user-images.githubusercontent.com/58449215/148702344-7e5abfbd-c0bf-4300-9c34-5769e9ae789d.png" width="500">
+</p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Navigation
+The user can navigate from all items, to available and bought by clicking these header options:
+<p align='center'>
+<img src="https://user-images.githubusercontent.com/58449215/148702516-276ca2df-75c3-4993-a718-bc9f6350c7ea.png" width="500">
+</p>
 
-### `npm test`
+### Pagination
+The user is able to navigate throw all the cloths easily with the pagination buttons, which allows the user to increase or decrease the page by 1 or digit the specific page he wants into the middle number input.
+<p align='center'>
+<img src="https://user-images.githubusercontent.com/58449215/148702600-30260c3d-0bb3-4aa9-a037-4aa148420395.png" width="500">
+</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Full responsive
+The user is able to use the website in all kind of devices, including tablets, smartphones and PCs.
+<p align='center'>
+  <img src="https://user-images.githubusercontent.com/58449215/148703565-6ac4ed8e-d282-4b2d-835a-19a9c7fc7c11.gif" width="500">
+</p>
 
-### `npm run build`
+## Technologies used
+<a href="#" target="_blank"> <img src="https://img.icons8.com/color/48/000000/html-5.png"/> </a>
+<a href="#" target="_blank"> <img src="https://img.icons8.com/color/48/000000/css3.png"/> </a>
+<a href="#" target="_blank"> <img src="https://img.icons8.com/color/48/000000/javascript.png"/></a> 
+<a href="#" target="_blank"> <img src="https://img.icons8.com/color/48/000000/redux.png"/> </a>
+<a href="#" target="_blank"> <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png"/></a> 
+<a href="#" target="_blank"> <img src="https://img.icons8.com/color/48/000000/postgreesql.png"/> </a>
+<a href="#" target="_blank"> <img src="https://img.icons8.com/color/48/000000/nodejs.png"/> </a>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## External APIs
+In order to host images I used the free Imgbb API, which can be found here: https://api.imgbb.com
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## How to run?
+ 
+```
+npm install
+```
+4. Run the project with:  
+```
+npm start
+```
