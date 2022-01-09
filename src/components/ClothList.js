@@ -2,18 +2,9 @@ import Item from './Item';
 import '../styles/ClothList.css';
 
 const ClothList = ({ clothes }) => {
-  const renderedItems = clothes?.map(
-    ({ id, name, description, price, img_url }) => (
-      <Item
-        id={id}
-        name={name}
-        description={description}
-        price={price}
-        img_url={img_url}
-        key={id}
-      />
-    )
-  );
+  const renderedItems = clothes?.map((item) => (
+    <Item item={item} key={item.id} />
+  ));
 
   return (
     <div>

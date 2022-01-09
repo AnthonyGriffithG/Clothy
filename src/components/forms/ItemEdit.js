@@ -5,6 +5,7 @@ import ItemForm from './ItemForm';
 import { IMGBB_KEY } from '../../config';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import history from '../../history';
 
 const ItemEdit = ({ editItem, item, getItem, match }) => {
   const [loading, setLoading] = useState(false);
@@ -30,6 +31,7 @@ const ItemEdit = ({ editItem, item, getItem, match }) => {
     console.log(formValues);
     await editItem(item.id, formValues);
     setLoading(false);
+    history.push('/');
   };
 
   return (

@@ -1,22 +1,33 @@
 import React from 'react';
 import '../styles/Item.css';
 import { AiFillEdit, AiFillDelete } from 'react-icons/ai';
+import { MdRemoveShoppingCart } from 'react-icons/md';
 import { connect } from 'react-redux';
-import { deleteItem } from '../actions';
+import { deleteItem, buyItem } from '../actions';
 import { Link } from 'react-router-dom';
 
-const Item = ({ name, description, price, id, img_url, deleteItem }) => {
-  const onDelete = async () => {
-    deleteItem(id);
+const Item = ({ item, deleteItem, buyItem }) => {
+  const onDelete = () => {
+    deleteItem(item.id);
+  };
+
+  const onBuy = async () => {
+    await buyItem(item);
   };
   return (
     <div className="item">
       <div className="image">
-        <img src={img_url} alt={description} />
+        <img src={item.img_url} alt={item.description} />
+        <div className="buy-icon-section">
+          <span className="icon-wrapper-rounded" onClick={onBuy}>
+            <MdRemoveShoppingCart size="1.8em" />
+          </span>
+        </div>
       </div>
+
       <header className="image-header">
         <span className="icon-wrapper-rounded">
-          <Link to={`/items/${id}`}>
+          <Link to={`/items/${item.id}`}>
             <AiFillEdit size="1.2em" />
           </Link>
         </span>
@@ -25,12 +36,12 @@ const Item = ({ name, description, price, id, img_url, deleteItem }) => {
         </span>
       </header>
       <footer className="image-info">
-        <h3>{name}</h3>
-        <p>{description}</p>
-        <p>{price}$</p>
+        <h3>{item.name}</h3>
+        <p>{item.description}</p>
+        <p>{item.price}$</p>
       </footer>
     </div>
   );
 };
 
-export default connect(null, { deleteItem })(Item);
+export default connect(null, { deleteItem, buyItem })(Item);

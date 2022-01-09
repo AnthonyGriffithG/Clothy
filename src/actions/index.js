@@ -1,5 +1,4 @@
 import itemsApi from '../apis/clothy-api';
-import history from '../history';
 
 import {
   SIGN_IN,
@@ -9,6 +8,7 @@ import {
   GET_ITEM,
   EDIT_ITEM,
   DELETE_ITEM,
+  BUY_ITEM,
 } from './types';
 export const signIn = (id, imgUrl) => {
   return {
@@ -30,7 +30,6 @@ export const addItem = (formValues) => async (dispatch) => {
     type: ADD_ITEM,
     payload: data,
   });
-  history.push('/');
 };
 
 export const getItems = () => async (dispatch) => {
@@ -62,5 +61,15 @@ export const deleteItem = (id) => async (dispatch) => {
   dispatch({
     type: DELETE_ITEM,
     payload: id,
+  });
+};
+
+export const buyItem = (item) => async (dispatch) => {
+  console.log(item);
+  const { data } = await itemsApi.put(`/items/${item.id}`, item);
+  console.log(data);
+  dispatch({
+    type: BUY_ITEM,
+    payload: data,
   });
 };

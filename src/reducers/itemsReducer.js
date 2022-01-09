@@ -4,6 +4,7 @@ import {
   EDIT_ITEM,
   DELETE_ITEM,
   GET_ITEM,
+  BUY_ITEM,
 } from '../actions/types.js';
 
 const INITAL_STATE = {
@@ -53,6 +54,12 @@ const itemsReducer = (state = INITAL_STATE, { type, payload }) => {
         ...state,
         all: newListHandlerDelete(state.all),
         available: newListHandlerDelete(state.available),
+      };
+    case BUY_ITEM:
+      return {
+        ...state,
+        available: state.available.filter((item) => item.id !== payload.id),
+        bought: [...state.bought, payload],
       };
     default:
       return state;

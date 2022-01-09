@@ -5,6 +5,7 @@ import ItemForm from './ItemForm';
 import { IMGBB_KEY } from '../../config';
 import axios from 'axios';
 import { useState } from 'react';
+import history from '../../history';
 
 const ItemCreate = ({ addItem }) => {
   const [loading, setLoading] = useState(false);
@@ -21,6 +22,8 @@ const ItemCreate = ({ addItem }) => {
     );
     formValues.img_url = data.data.url;
     await addItem(formValues);
+    setLoading(false);
+    history.push('/');
   };
   return (
     <>
