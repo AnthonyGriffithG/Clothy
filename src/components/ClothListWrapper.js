@@ -8,8 +8,9 @@ import {
 import '../styles/ClothList.css';
 import ClothList from './ClothList';
 import { PAGE_SIZE } from '../config';
+import { connect } from 'react-redux';
 
-export default function ClothListWrapper({ clothes }) {
+const ClothListWrapper = ({ clothes, isSignedIn }) => {
   const [page, setPage] = useState(1);
   const [fixed, setFixed] = useState(false);
 
@@ -29,15 +30,17 @@ export default function ClothListWrapper({ clothes }) {
   }, []);
   return (
     <div className="clothlist-wrapper">
-      <div className="items-options">
-        <div></div>
-        <Link
-          className={`add-item-link ${fixed ? 'fixed' : ''}`}
-          to={'/items/new'}
-        >
-          <MdAddCircle size={fixed ? '3em' : '2em'} />
-        </Link>
-      </div>
+      {isSignedIn ? (
+        <div className="items-options">
+          <div></div>
+          <Link
+            className={`add-item-link ${fixed ? 'fixed' : ''}`}
+            to={'/items/new'}
+          >
+            <MdAddCircle size={fixed ? '3em' : '2em'} />
+          </Link>
+        </div>
+      ) : null}
       <ClothList
         clothes={clothes.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)}
       />
@@ -66,4 +69,10 @@ export default function ClothListWrapper({ clothes }) {
       </div>
     </div>
   );
-}
+};
+
+const mapStateToProps = (state) => {
+  return { isSignedIn: state.auth.isSignedIn };
+};
+
+export default connect(mapStateToProps, null)(ClothListWrapper);

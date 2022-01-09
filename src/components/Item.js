@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { deleteItem, buyItem } from '../actions';
 import { Link } from 'react-router-dom';
 
-const Item = ({ item, deleteItem, buyItem }) => {
+const Item = ({ item, deleteItem, buyItem, isSignedIn }) => {
   const onDelete = () => {
     deleteItem(item.id);
   };
@@ -19,21 +19,27 @@ const Item = ({ item, deleteItem, buyItem }) => {
       <div className="image">
         <img src={item.img_url} alt={item.description} />
         <div className="buy-icon-section">
-          <span className="icon-wrapper-rounded" onClick={onBuy}>
-            <MdRemoveShoppingCart size="1.8em" />
-          </span>
+          {isSignedIn ? (
+            <span className="icon-wrapper-rounded" onClick={onBuy}>
+              <MdRemoveShoppingCart size="1.8em" />
+            </span>
+          ) : null}
         </div>
       </div>
 
       <header className="image-header">
-        <span className="icon-wrapper-rounded">
-          <Link to={`/items/${item.id}`}>
-            <AiFillEdit size="1.2em" />
-          </Link>
-        </span>
-        <span className="icon-wrapper-rounded" onClick={onDelete}>
-          <AiFillDelete size="1.2em" />
-        </span>
+        {isSignedIn ? (
+          <span className="icon-wrapper-rounded">
+            <Link to={`/items/${item.id}`}>
+              <AiFillEdit size="1.2em" />
+            </Link>
+          </span>
+        ) : null}
+        {isSignedIn ? (
+          <span className="icon-wrapper-rounded" onClick={onDelete}>
+            <AiFillDelete size="1.2em" />
+          </span>
+        ) : null}
       </header>
       <footer className="image-info">
         <h3>{item.name}</h3>
@@ -44,4 +50,10 @@ const Item = ({ item, deleteItem, buyItem }) => {
   );
 };
 
-export default connect(null, { deleteItem, buyItem })(Item);
+const mapStateToProps = (state) => {
+  return {
+    isSignedIn: state.auth.isSignedIn,
+  };
+};
+
+export default connect(mapStateToProps, { deleteItem, buyItem })(Item);

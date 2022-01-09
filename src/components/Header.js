@@ -27,7 +27,9 @@ const Header = ({ userImgUrl }) => {
         <GoogleAuth />
       </div>
       <div className="profile-pic-container">
-        <img src={userImgUrl} alt="profile pic" className="profile-pic"></img>
+        {userImgUrl ? (
+          <img src={userImgUrl} alt="profile pic" className="profile-pic"></img>
+        ) : null}
       </div>
 
       <MdMenu
