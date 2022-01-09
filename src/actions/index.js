@@ -65,9 +65,8 @@ export const deleteItem = (id) => async (dispatch) => {
 };
 
 export const buyItem = (item) => async (dispatch) => {
-  console.log(item);
+  item.available = false;
   const { data } = await itemsApi.put(`/items/${item.id}`, item);
-  console.log(data);
   dispatch({
     type: BUY_ITEM,
     payload: data,

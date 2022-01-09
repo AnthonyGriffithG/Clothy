@@ -25,7 +25,8 @@ const itemsReducer = (state = INITAL_STATE, { type, payload }) => {
       return {
         ...state,
         all: payload,
-        available: payload,
+        available: payload.filter((item) => item.available),
+        bought: payload.filter((item) => !item.available),
       };
     case GET_ITEM:
       const addItemHandler = (list, item) => {
