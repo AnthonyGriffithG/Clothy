@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+Project created by:  
+  
+[![Github](https://img.shields.io/badge/GitHub-Anthony_Griffith-100000?style=for-the-badge&logo=github&logoColor=white&labelColor=101010)](https://github.com/AnthonyGriffith) [![LinkedIn](https://img.shields.io/badge/LinkedIn-Anthony_Griffith-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=101010)](https://www.linkedin.com/in/anthony-griffith/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Clothy
+Cool fullstack (**PERN**) react project to use multiple topics learnt, such as **google client authentification**, Navigation with **React Router**, form creation with **React Hooks Form**, state managment with **React-Redux**, API calls to a **backend server** that uses a **postgres database** to store and fetch data, and all this with a nice looking and completely **responsive** design! 
 
-## Available Scripts
+## Website overview
+Basically the idea of the application is to administrate multiple items that are being selled in a website, at the moment every user that is signed in can create, delete and edit all items of the website, meanwhile an unsigned user can only see the content. 
+<p align='center'>
+<img src="https://user-images.githubusercontent.com/58449215/148701103-6796c341-a310-4270-bfcc-ade49bc65ee9.png" width="500">  
+</p>
 
-In the project directory, you can run:
+### Filtering
+User can search movies in the next ways: <strong>Popular, Trending, Top rated</strong> and <strong> Search by name </strong>
+  
+ <img src="https://user-images.githubusercontent.com/58449215/144736874-cdfe987d-55f4-4da0-a347-d52d6728bd45.png" width="900">
+ 
+### Overview of movie
+The user can see some information about the movie by hovering the image.  
+  
+<img src="https://user-images.githubusercontent.com/58449215/144736988-0ad9a0b6-8303-4f9b-bc0c-7fd12e7989fd.png" width="500">
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies used
+<a href="#" target="_blank"> <img src="https://img.icons8.com/color/48/000000/html-5.png"/> </a>
+<a href="#" target="_blank"> <img src="https://img.icons8.com/color/48/000000/css3.png"/> </a>
+<a href="#" target="_blank"> <img src="https://img.icons8.com/color/48/000000/javascript.png"/></a> 
+<a href="#" target="_blank"> <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png"/></a> 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## External APIs
+In order to get all the movies I used the services provided from The Movie Database API, that you can find here: https://developers.themoviedb.org
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## How to run?
+You can test the website here: https://cinema-top-movies.netlify.app or follow these steps:
+1. Clone the project
+2. Open the folder directory
+3. Install dependencies with the following command:   
+```
+npm install
+```
+4. Run the project with:  
+```
+npm start
+```
