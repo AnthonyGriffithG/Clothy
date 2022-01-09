@@ -1,7 +1,7 @@
 .items-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  padding: 3em;
+  padding: 3em 3em 1em 3em;
   gap: 2em;
   margin: 0 auto;
   width: 80%;
@@ -26,6 +26,54 @@ a {
   position: fixed;
   right: 1em;
   bottom: 1em;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(133, 133, 133);
+  width: fit-content;
+  margin: 0 auto;
+  height: 2em;
+  background-color: #515559;
+  border-radius: 0.3em;
+}
+
+.pagination-el {
+  display: flex;
+  background-color: #515559;
+  color: #fff;
+  border: none;
+  height: 100%;
+  align-items: center;
+}
+
+.btn-pagination {
+  cursor: pointer;
+  transition: all 0.1s;
+}
+.btn-pagination:active {
+  background-color: #797b7c;
+}
+
+.number-pagination {
+  min-width: 0.5em;
+  width: 2.5em;
+  background-color: #515559;
+  color: #fff;
+  text-align: center;
+  border-right: 1px solid rgb(187, 187, 187);
+  border-left: 1px solid rgb(187, 187, 187);
+  height: 95%;
+}
+
+.number-pagination::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.clothlist-wrapper {
+  padding-bottom: 3em;
 }
 
 @media screen and (max-width: 1400px) {

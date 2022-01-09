@@ -15,13 +15,6 @@ td {
   padding: 0.5em 1em;
 }
 
-input {
-  border: none;
-  border-radius: 1em;
-  padding: 0.5em 1em;
-  font-family: 'Poppins';
-}
-
 button[type='submit'] {
   border-radius: 5px;
   padding: 0.3em 1em;
@@ -32,10 +25,21 @@ button[type='submit']:hover {
   background-color: white;
 }
 
-input[type='number'] {
+.input-number-item-form {
   width: 60%;
+  border: none;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  font-family: 'Poppins';
 }
 
-input[type='file'] {
+.input-file-item-form {
   width: 250px;
+}
+
+.input-text-item-form {
+  border: none;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  font-family: 'Poppins';
 }

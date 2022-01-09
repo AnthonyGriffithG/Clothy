@@ -28,7 +28,10 @@ const ItemForm = ({ onSubmit, initialValues, formTitle }) => {
                 <label>Name</label>
               </td>
               <td>
-                <input {...register('name', { required: true })} />
+                <input
+                  className="input-text-item-form"
+                  {...register('name', { required: true })}
+                />
               </td>
             </tr>
             <tr>
@@ -36,7 +39,10 @@ const ItemForm = ({ onSubmit, initialValues, formTitle }) => {
                 <label>Descripcion</label>
               </td>
               <td>
-                <input {...register('description', { required: true })} />
+                <input
+                  className="input-text-item-form"
+                  {...register('description', { required: true })}
+                />
               </td>
             </tr>
             <tr>
@@ -46,6 +52,7 @@ const ItemForm = ({ onSubmit, initialValues, formTitle }) => {
               <td>
                 <input
                   type="number"
+                  className="input-number-item-form"
                   {...register('price', { required: true })}
                 />
               </td>
@@ -59,6 +66,7 @@ const ItemForm = ({ onSubmit, initialValues, formTitle }) => {
                   {...register('image', { required: false })}
                   type="file"
                   accept="image/*"
+                  className="input-file-item-form"
                 />
               </td>
             </tr>
