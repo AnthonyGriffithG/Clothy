@@ -19,7 +19,7 @@ const Item = ({ item, deleteItem, buyItem, isSignedIn }) => {
       <div className="image">
         <img src={item.img_url} alt={item.description} />
         <div className="buy-icon-section">
-          {isSignedIn ? (
+          {isSignedIn && item.available ? (
             <span className="icon-wrapper-rounded" onClick={onBuy}>
               <MdRemoveShoppingCart size="1.8em" />
             </span>

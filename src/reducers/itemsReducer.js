@@ -57,10 +57,12 @@ const itemsReducer = (state = INITAL_STATE, { type, payload }) => {
         available: newListHandlerDelete(state.available),
       };
     case BUY_ITEM:
+      console.log(payload);
       return {
         ...state,
         available: state.available.filter((item) => item.id !== payload.id),
         bought: [...state.bought, payload],
+        all: state.all.map((el) => (el.id === payload.id ? payload : el)),
       };
     default:
       return state;
