@@ -63,9 +63,17 @@ In order to host images I used the free Imgbb API, which can be found here: http
 
 
 ## How to run?
- 
+ 1. Install the required packages with
 ```
 npm install
+```
+2. Setup your keys in the following file:
+```
+src/config.js
+```
+3. Clone the backend repo and start it by following the instructions here: 
+```
+https://github.com/AnthonyGriffith/Clothy-Backend/blob/main/README.md
 ```
 4. Run the project with:  
 ```
