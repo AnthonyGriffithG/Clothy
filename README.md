@@ -63,6 +63,7 @@ In order to host images I used the free Imgbb API, which can be found here: http
 
 
 ## How to run?
+You can try the hosted website here https://clothy-web-app.herokuapp.com or follow the next steps:
  1. Install the required packages with
 ```
 npm install
