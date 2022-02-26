@@ -8,6 +8,7 @@ import ItemCreate from './forms/ItemCreate';
 import { getItems } from '../actions';
 import ItemEdit from './forms/ItemEdit';
 import ClothListWrapper from './ClothListWrapper';
+import About from './About';
 
 const App = ({ items, available, bought, getItems }) => {
   useEffect(() => {
@@ -38,6 +39,7 @@ const App = ({ items, available, bought, getItems }) => {
             <Route path="/items/new" exact component={ItemCreate} />
             <Route path="/items/:id" exact component={ItemEdit} />
           </Switch>
+          <About />
         </div>
       </Router>
     </div>

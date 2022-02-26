@@ -24,6 +24,9 @@ const Header = ({ userImgUrl }) => {
         <Link className="link" to="/bought">
           BOUGHT
         </Link>
+        <a className="link" href="#about">
+          ABOUT
+        </a>
         <GoogleAuth />
       </div>
       <div className="profile-pic-container">

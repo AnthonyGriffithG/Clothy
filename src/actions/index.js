@@ -24,7 +24,6 @@ export const signOut = () => {
 };
 
 export const addItem = (formValues) => async (dispatch) => {
-  console.log(formValues);
   const { data } = await itemsApi.post('/items', formValues);
   dispatch({
     type: ADD_ITEM,

@@ -1,0 +1,27 @@
+.footer {
+  background-color: rgb(31, 31, 32);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  padding: 1em 0;
+}
+
+.footer-title,
+.footer-description {
+  color: rgb(212, 212, 212);
+}
+
+.footer-description {
+  font-size: 10px;
+}
+.socials {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  margin: 0;
+  padding: 0;
+}
